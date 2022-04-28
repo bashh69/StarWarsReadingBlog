@@ -5,7 +5,7 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+				<span ><img id="topLeftLogo" src="https://www.pngitem.com/pimgs/m/21-210302_star-wars-logo-png-star-wars-logo-icon.png" /></span>
 			</Link>
 			<div className="ml-auto">
 				<Link to="/demo">

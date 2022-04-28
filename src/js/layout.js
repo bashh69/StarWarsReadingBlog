@@ -6,6 +6,8 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
+import {Characters} from "./views/characters";
+import {Character} from "./views/character"
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -17,20 +19,15 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div id="BlueBoxIthink">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
+						<Route exact path="/" component={Home}/>
+						<Route exact path="/demo" component={Demo}/>
+						<Route exact path="/single/:theid" component={Single}/>
+						<Route exact path="/character/:id" component={Character}/>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
