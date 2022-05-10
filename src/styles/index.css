@@ -5,3 +5,26 @@
     border: 1px solid black;
     border-radius: 15px;
 }
+#characters{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+
+}
+#planets{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+}
+#starships{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.space {
+    margin-left: 10px;
+}
