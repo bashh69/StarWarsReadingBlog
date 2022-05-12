@@ -22,15 +22,12 @@ export const Starships = () => {
                 <img
                   style={{ height: 300, width: 300 }}
                   src="https://www.denofgeek.com/wp-content/uploads/2016/01/star-destroyer_0-scaled.jpg?fit=2560%2C2066"
-                  class="card-img-top"
+                  className="card-img-top"
                   alt="..."
                 />
                 <div className="card-body">
                   <h5 className="card-title">{starships.name}</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
+                
                   <button className="btn btn-primary">
                     <Link
                       style={{ color: "white" }}

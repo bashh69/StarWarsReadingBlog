@@ -22,15 +22,12 @@ export const Planets = () => {
                 <img
                   style={{ height: 300, width: 300 }}
                   src="https://reviewsyouread.files.wordpress.com/2021/03/10-more-star-wars-planets-as-countries.png"
-                  class="card-img-top"
+                  className="card-img-top"
                   alt="..."
                 />
                 <div className="card-body">
                   <h5 className="card-title">{planets.name}</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
+              
                   <button className="btn btn-primary">
                     <Link
                       style={{ color: "white" }}

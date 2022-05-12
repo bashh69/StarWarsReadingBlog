@@ -29,7 +29,7 @@ const Layout = () => {
 						<Route exact path="/" component={Home}/>
 						<Route exact path="/demo" component={Demo}/>
 						<Route exact path="/single/:theid" component={Single}/>
-						<Route exact path="/character/:id" component={Character}/>
+						<Route exact path="/characters/:id" component={Character}/>
 						<Route exact path="/planets/:id" component={Planet}/>
 						<Route exact path="/starships/:id" component={Starship}/>
 						<Route>
