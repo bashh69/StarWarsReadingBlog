@@ -41,7 +41,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            setStore({ planet: data.results });
+            setStore({ planet: data.result.properties });
           })
           .catch((err) => console.error(err));
       },
@@ -55,11 +55,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 		  .catch((err) => console.error(err));
 	  },
 	  loadStarship: (id) =>{
-		fetch(`https://www.swapi.tech/api/starships/${id}`)
-		.then((res) => res.json())
-		.then((data) => {
-			console.log(data);
-			setStore({ starship: data.results });
+		  fetch(`https://www.swapi.tech/api/starships/${id}`)
+		  .then((res) => res.json())
+		  .then((data) => {
+			 console.log(data);
+			 setStore({ starship: data.result.properties });
 		})
 		.catch((err) => console.error(err));
 	},

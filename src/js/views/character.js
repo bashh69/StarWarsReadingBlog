@@ -14,6 +14,14 @@ export const Character = (props) => {
     let id = props.match.params.id
     return (
         <div>
+           <p>Name: {store.character.name}</p>
+           <p>Mass: {store.character.mass}</p>
+           <p>Heigh: {store.character.height}</p>
+           <p>Hair  Color: {store.character.hair_color}</p>
+           <p>Skin Color: {store.character.skin_color}</p>
            <p>Eye Color: {store.character.eye_color}</p>
+           <p>Birth Year: {store.character.birth_year}</p>
+           <p>Gender: {store.character.gender}</p>
+           <p>Home World: {store.character.homeworld}</p>
         </div>)
 };

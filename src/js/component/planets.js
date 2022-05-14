@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 
 export const Planets = () => {
   const { store, actions } = useContext(Context);
-  useEffect(() => {
+    useEffect(() => {
     actions.loadPlanets();
-  }, []);
-
-  console.log(store);
+    }, []);
+    console.log(store);
   return (
     <div>
       <h1>Planets</h1>

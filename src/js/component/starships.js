@@ -3,16 +3,15 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Starships = () => {
-  useEffect(() => {
-    actions.loadStarships();
-  }, []);
   const { store, actions } = useContext(Context);
-
-  console.log(store);
+    useEffect(() => {
+    actions.loadStarships();
+    }, []);
+    console.log(store);
   return (
     <div>
       <h1>Starships</h1>
-      <div id="characters">
+      <div id="starships">
         {!store.starships ? (
           <h1> loading </h1>
         ) : (
@@ -31,7 +30,7 @@ export const Starships = () => {
                   <button className="btn btn-primary">
                     <Link
                       style={{ color: "white" }}
-                      to={`starship/${starships.uid}`}
+                      to={`starships/${starships.uid}`}
                     >
                       <p>Learn More!</p>
                     </Link>
