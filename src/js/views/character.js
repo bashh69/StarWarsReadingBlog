@@ -13,7 +13,7 @@ export const Character = (props) => {
     console.log(store)
     let id = props.match.params.id
     return (
-        <div>
+        <div className="character">
            <p>Name: {store.character.name}</p>
            <p>Mass: {store.character.mass}</p>
            <p>Heigh: {store.character.height}</p>

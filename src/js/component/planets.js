@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Planets = () => {
   const { store, actions } = useContext(Context);
-    useEffect(() => {
+  useEffect(() => {
     actions.loadPlanets();
-    }, []);
-    console.log(store);
+  }, []);
+  console.log(store);
   return (
     <div>
       <h1>Planets</h1>
@@ -26,14 +27,18 @@ export const Planets = () => {
                 />
                 <div className="card-body">
                   <h5 className="card-title">{planets.name}</h5>
-              
-                  <button className="btn btn-primary">
-                    <Link
-                      style={{ color: "white" }}
-                      to={`planets/${planets.uid}`}
-                    >
+
+                  <Link
+                    style={{ color: "white" }}
+                    to={`planets/${planets.uid}`}
+                  >
+                    <button className="btn btn-primary">
                       <p>Learn More!</p>
-                    </Link>
+                    </button>
+                  </Link>
+
+                  <button type="button" class="btn btn-warning">
+                    <FontAwesomeIcon icon="fa-solid fa-heart" />
                   </button>
                 </div>
               </div>
