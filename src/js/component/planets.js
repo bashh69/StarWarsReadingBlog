@@ -2,6 +2,10 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Card } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+
 
 export const Planets = () => {
   const { store, actions } = useContext(Context);
@@ -18,30 +22,28 @@ export const Planets = () => {
         ) : (
           store.planets.map((planets, i) => {
             return (
-              <div className="space" key={planets.uid}>
-                <img
-                  style={{ height: 300, width: 300 }}
+              <Col>
+              <Card className="bg-dark text-white space" style={{ width: "20rem" }} key={planets.uid}>
+                <Card.Img
+                  className="imagen"
+                  variant="top"
                   src="https://reviewsyouread.files.wordpress.com/2021/03/10-more-star-wars-planets-as-countries.png"
-                  className="card-img-top"
-                  alt="..."
                 />
-                <div className="card-body">
-                  <h5 className="card-title">{planets.name}</h5>
-
+                <Card.Body>
+                  <Card.Title>{planets.name}</Card.Title>
+                 
                   <Link
-                    style={{ color: "white" }}
-                    to={`planets/${planets.uid}`}
-                  >
-                    <button className="btn btn-primary">
-                      <p>Learn More!</p>
-                    </button>
+                      style={{ color: "white" }}
+                      to={`planets/${planets.uid}`}
+                    >
+                    <Button className= "nomejodasmas" variant="primary">Learn More</Button>
                   </Link>
-
-                  <button type="button" class="btn btn-warning">
-                    <FontAwesomeIcon icon="fa-solid fa-heart" />
-                  </button>
-                </div>
-              </div>
+                  <Button className="heart" variant="warning">
+                    <i className="far fa-heart" />
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
             );
           })
         )}
