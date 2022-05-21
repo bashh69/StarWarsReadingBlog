@@ -24,7 +24,6 @@ export const Character = (props) => {
           <p>Eye Color: {store.character.eye_color}</p>
           <p>Birth Year: {store.character.birth_year}</p>
           <p>Gender: {store.character.gender}</p>
-          <p>Home World: {store.character.homeworld}</p>
         </div>
       </div>
     </div>

@@ -15,8 +15,8 @@ export const Planet = (props) => {
     <div className="planet">
       <div className="card" style={{ width: "18rem" }}>
         <div className="card-body">
-          <h1>Name :{store.planet.name}</h1>
-          <p>Diameter :{store.planet.diameter}</p>
+          <h1>Name : { store.planet.name}</h1>
+          <p>Diameter : { store.planet.diameter}</p>
           <p>Rotation Period :{store.planet.rotation_period}</p>
           <p>Orbital Period :{store.planet.orbital_period}</p>
           <p>Gravity :{store.planet.gravity}</p>
