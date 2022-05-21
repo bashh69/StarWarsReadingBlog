@@ -45,7 +45,11 @@ h1 {
     color: yellow
 }
 
-.character {
+.card {
     margin: auto;
     padding: 70px 0;
+    background-color: silver;
+}
+.card-body {
+    text-align: center
 }
