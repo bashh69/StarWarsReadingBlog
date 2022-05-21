@@ -36,3 +36,16 @@
 .nomejodasmas {
     float: left;
 }
+
+body {
+    background: url("https://wallpapercave.com/wp/wp2902991.jpg") 
+   
+}
+h1 {
+    color: yellow
+}
+
+.character {
+    margin: auto;
+    padding: 70px 0;
+}
